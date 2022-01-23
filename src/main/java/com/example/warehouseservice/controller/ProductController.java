@@ -18,26 +18,28 @@ import lombok.extern.slf4j.Slf4j;
  * Controller class for adding and fetching Product Information
  *
  * @author praveen kumar m
- * @version 1.0
+ * @version 1.0.0
  * @since 23-Jan-2022
  */
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/warehouse/v1/product")
-@Api(value = "Product Service",tags = {"Product"})
+@Api(value = "Product Service", tags = { "Product" })
 public class ProductController
 {
 	private final ProductService _productService;
 
 	/**
 	 * Get Available Product for given product name search
+	 *
 	 * @param productName Product Name to be search
 	 * @return Matching products list for given product name
 	 * @throws WarehouseException throw product name exception when product name is null or empty
 	 */
 	@ApiOperation(value = "Get Available Product for given product name search")
-	@ApiResponses(value = {@ApiResponse(code = 200, message = "Successfully fetched product information for given productName"),
+	@ApiResponses(value = {
+		@ApiResponse(code = 200, message = "Successfully fetched product information for given productName"),
 		@ApiResponse(code = 400, message = "Invalid Request params "),
 		@ApiResponse(code = 401, message = "Not Authorized to view the resources"),
 		@ApiResponse(code = 404, message = "The resource you where trying to reach is not found"),
@@ -58,12 +60,14 @@ public class ProductController
 
 	/**
 	 * Create Product or Add existing Product to the mentioned box
+	 *
 	 * @param product Product detail information
 	 * @return store product information response
 	 * @throws WarehouseException thrown mandatory product information if null or empty
 	 */
 	@ApiOperation(value = "Create Product or Add existing Product to the mentioned box")
-	@ApiResponses(value = {@ApiResponse(code = 201, message = "Successfully created/added the product to the mention box"),
+	@ApiResponses(value = {
+		@ApiResponse(code = 201, message = "Successfully created/added the product to the mention box"),
 		@ApiResponse(code = 401, message = "Not Authorized to view the resources"),
 		@ApiResponse(code = 404, message = "The resource you where trying to reach is not found"),
 		@ApiResponse(code = 500, message = "Internal Server error occurred")

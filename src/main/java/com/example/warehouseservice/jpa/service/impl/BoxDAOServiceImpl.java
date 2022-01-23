@@ -9,6 +9,13 @@ import com.example.warehouseservice.jpa.repository.BoxRepository;
 import com.example.warehouseservice.jpa.service.BoxDAOService;
 import com.example.warehouseservice.model.request.Box;
 
+/**
+ * BoxDAOServiceImpl class  for executing transaction
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 @Repository
 public class BoxDAOServiceImpl implements BoxDAOService
 {

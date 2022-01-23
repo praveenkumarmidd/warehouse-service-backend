@@ -8,6 +8,13 @@ import org.hibernate.annotations.GenericGenerator;
 import com.sun.istack.NotNull;
 import lombok.*;
 
+/**
+ * Box Entity class for handling box transaction
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 @Data
 @Builder
 @AllArgsConstructor

@@ -11,7 +11,7 @@ import org.springframework.web.cors.CorsConfiguration;
  * Security configuration class for enabling basic authentication of the service
  *
  * @author praveen kumar m
- * @version 1.0
+ * @version 1.0.0
  * @since 23-Jan-2022
  */
 @Configuration
@@ -21,14 +21,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 	@Override
 	protected void configure(HttpSecurity http) throws Exception
 	{
+		/*To enable authentication for every requst of the application*/
 		http.csrf()
 			.disable()
 			.authorizeRequests().anyRequest().authenticated()
 			.and()
 			.httpBasic();
 
+		/*To enable the H2 database database admin console, by default spring security disable it */
 		http.headers().frameOptions().disable();
 
+		/*To handle CORS configuration of the application*/
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowedHeaders(Arrays.asList("*"));
 		corsConfiguration.setAllowedOrigins(Arrays.asList("*"));

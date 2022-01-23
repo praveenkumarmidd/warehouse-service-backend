@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
  * Global Exception handler
  *
  * @author praveen kumar m
- * @version 1.0
+ * @version 1.0.0
  * @since 23-Jan-2022
  */
 @Slf4j
@@ -25,7 +25,7 @@ public class GenericExceptionHandler
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	public ErrorResponse handleMandatoryFields(MethodArgumentNotValidException ex)
 	{
-		log.error("Exception occurred due to missing mandatory method arguments {}",ex);
+		log.error("Exception occurred due to missing mandatory method arguments {}", ex);
 		return ErrorResponse.builder()
 			.status(WarehouseConstant.KO.getString())
 			.timestamp(new Date())
@@ -37,7 +37,7 @@ public class GenericExceptionHandler
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 	public ErrorResponse handleMissingParams(MissingServletRequestParameterException ex)
 	{
-		log.error("Exception occurred due to missing params arguments {}",ex);
+		log.error("Exception occurred due to missing params arguments {}", ex);
 		return ErrorResponse.builder()
 			.status(WarehouseConstant.KO.getString())
 			.timestamp(new Date())
@@ -49,7 +49,7 @@ public class GenericExceptionHandler
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	public ErrorResponse warehouseServiceCustomException(WarehouseException warehouseException)
 	{
-		log.error("Exception occurred due to internal server error {}",warehouseException);
+		log.error("Exception occurred due to internal server error {}", warehouseException);
 		return ErrorResponse.builder()
 			.status(WarehouseConstant.KO.getString())
 			.timestamp(new Date())
@@ -61,7 +61,7 @@ public class GenericExceptionHandler
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	public ErrorResponse genericException(Exception exception)
 	{
-		log.error("Exception occurred while processing the request {}",exception);
+		log.error("Exception occurred while processing the request {}", exception);
 		return ErrorResponse.builder()
 			.status(WarehouseConstant.KO.getString())
 			.timestamp(new Date())

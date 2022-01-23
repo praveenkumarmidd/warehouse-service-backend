@@ -7,6 +7,13 @@ import com.example.warehouseservice.model.request.Box;
 import com.example.warehouseservice.service.BoxService;
 import lombok.AllArgsConstructor;
 
+/**
+ * Box Service Impl class of warehouse service
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 @AllArgsConstructor
 @Service
 public class BoxServiceImpl implements BoxService

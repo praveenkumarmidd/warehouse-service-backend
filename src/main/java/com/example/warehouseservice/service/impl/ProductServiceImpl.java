@@ -13,6 +13,14 @@ import com.example.warehouseservice.service.ProductService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Product Service Impl class of warehouse service
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
+
 @Slf4j
 @AllArgsConstructor
 @Service

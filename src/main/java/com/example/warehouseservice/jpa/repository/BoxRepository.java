@@ -6,6 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import com.example.warehouseservice.jpa.entity.BoxEntity;
 
+/**
+ * Box repository interface for handling box transaction
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 public interface BoxRepository extends JpaRepository<BoxEntity, String>
 {
 	BoxEntity findByBoxNameAndAndBoxAvailableCapacityNot(String boxName,int capacity);

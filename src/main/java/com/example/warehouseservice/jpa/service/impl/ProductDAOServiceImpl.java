@@ -13,6 +13,13 @@ import com.example.warehouseservice.jpa.repository.ProductRepository;
 import com.example.warehouseservice.jpa.service.ProductDAOService;
 import com.example.warehouseservice.model.request.Product;
 
+/**
+ * ProductDAOServiceImpl class  for executing transaction
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 @Repository
 public class ProductDAOServiceImpl implements ProductDAOService
 {

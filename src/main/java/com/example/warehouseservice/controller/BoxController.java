@@ -19,14 +19,14 @@ import lombok.extern.slf4j.Slf4j;
  * Controller class for creating and fetching boxes
  *
  * @author praveen kumar m
- * @version 1.0
+ * @version 1.0.0
  * @since 23-Jan-2022
  */
 
 @Slf4j
 @AllArgsConstructor
 @RequestMapping(path = "/warehouse/v1/box")
-@Api(value = "Box Service",tags = {"Location"})
+@Api(value = "Box Service", tags = { "Location" })
 @RestController
 public class BoxController
 {
@@ -34,12 +34,14 @@ public class BoxController
 
 	/**
 	 * Create Box Operation to create box with given capacity
+	 *
 	 * @param box Box Information
 	 * @return Stored response of Box
 	 * @throws WarehouseException throw BoxName or Box Capacity is null or empty
 	 */
 	@ApiOperation(value = "Create Box with user specified capacity")
-	@ApiResponses(value = {@ApiResponse(code = 201, message = "Successfully created the box with specified capacity"),
+	@ApiResponses(value = {
+		@ApiResponse(code = 201, message = "Successfully created the box with specified capacity"),
 		@ApiResponse(code = 401, message = "Not Authorized to view the resources"),
 		@ApiResponse(code = 404, message = "The resource you where trying to reach is not found"),
 		@ApiResponse(code = 500, message = "Internal Server error occurred")
@@ -61,18 +63,20 @@ public class BoxController
 		}
 		catch (Exception exp)
 		{
-			log.error("Exception occurred while creating the BOx {}", exp);
+			log.error("Exception occurred while creating the Box {}", exp);
 			throw new WarehouseException(WarehouseConstant.BOX_ALREADY_EXIT.getString());
 		}
 	}
 
 	/**
 	 * Get Box with available capacity
+	 *
 	 * @return Boxes with available capacity are fetche
 	 * @throws WarehouseException throw box with available capacity not found
 	 */
 	@ApiOperation(value = "Get Box with available capacity")
-	@ApiResponses(value = {@ApiResponse(code = 200, message = "Boxes with available capacity are fetched"),
+	@ApiResponses(value = {
+		@ApiResponse(code = 200, message = "Boxes with available capacity are fetched"),
 		@ApiResponse(code = 401, message = "Not Authorized to view the resources"),
 		@ApiResponse(code = 404, message = "The resource you where trying to reach is not found"),
 		@ApiResponse(code = 500, message = "Internal Server error occurred")

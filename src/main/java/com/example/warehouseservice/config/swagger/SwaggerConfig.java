@@ -12,8 +12,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * Swagger configuration class for enabling service docs
  *
  * @author praveen kumar m
- * @version 1.0
- * @since 23-Jan-2021
+ * @version 1.0.0
+ * @since 23-Jan-2022
  */
 @Configuration
 @EnableSwagger2

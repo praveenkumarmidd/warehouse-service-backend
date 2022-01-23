@@ -6,6 +6,13 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.validation.constraints.NotNull;
 import lombok.*;
 
+/**
+ * Product input request model class
+ *
+ * @author praveen kumar m
+ * @version 1.0.0
+ * @since 23-Jan-2022
+ */
 @Builder
 @Getter
 @AllArgsConstructor

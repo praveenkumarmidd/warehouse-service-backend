@@ -13,6 +13,7 @@ TechStack:
 4. H2 Database
 5. Swagger - 2.9.2
 6. Junit
+7. Docker
 
 Git Repository URL:
 ------------------

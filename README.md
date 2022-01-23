@@ -15,7 +15,7 @@ TechStack:
 6. Junit
 7. Docker
 
-Git Repository URL:
+Git hub Repository:
 ------------------
 https://github.com/praveenkumarmidd/warehouse-service-backend.git
 
@@ -31,10 +31,13 @@ Docker Hub Repository:
 docker image praveenkumarmiddi/warehouse-service-backend:v1
 
 Steps to run (Docker image):
-Execute the command "docker-compose -f docker-compose.yml up" in the project root directory
+1. To run only warehouse backend service:
+   docker pull praveenkumarmiddi/warehouse-service-backend:v1
+   docker run -p 8080:8080 praveenkumarmiddi/warehouse-service-backend:v1
+   
+2. To run Frontend and Backend:
+"docker-compose -f docker-compose.yml up" in the project root directory
 
-Fallback Option to run docker image:
-docker run -p 8080:8080 praveenkumarmiddi/warehouse-service-backend:v1
 -------------------------------------------------------------------------------------------------------
 
 Application URL:

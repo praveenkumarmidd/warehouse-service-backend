@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @AllArgsConstructor
 @RequestMapping(path = "/warehouse/v1/box")
-@Api(value = "Box Service")
+@Api(value = "Box Service",tags = {"Location"})
 @RestController
 public class BoxController
 {

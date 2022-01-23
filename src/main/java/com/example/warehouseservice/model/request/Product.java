@@ -21,6 +21,5 @@ public class Product
 	@NotNull
 	private String boxName;
 
-	@ApiModelProperty(notes = "Available box list of Product", name = "box")
 	private List<String> locationList;
 }

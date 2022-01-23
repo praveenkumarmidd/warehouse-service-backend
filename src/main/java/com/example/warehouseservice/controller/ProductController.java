@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/warehouse/v1/product")
-@Api(value = "Product Service")
+@Api(value = "Product Service",tags = {"Product"})
 public class ProductController
 {
 	private final ProductService _productService;

@@ -29,7 +29,7 @@ public class SwaggerConfig
     }
 
     private ApiInfo apiEndPointsInfo() {http://localhost:8080/swagger-ui.html#/
-        return new ApiInfoBuilder().title("Warehouse")
+        return new ApiInfoBuilder().title("Warehouse Service")
                 .description("Service express storing and fetching the products")
                 .license("Copyright (c) test")
                 .version("1.0.0")

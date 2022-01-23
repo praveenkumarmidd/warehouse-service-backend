@@ -13,7 +13,6 @@ import lombok.*;
 @ApiModel(description = "Box Details")
 public class Box
 {
-	@ApiModelProperty(notes = "Box Unique Id", name = "box", required = true)
 	private String boxId;
 
 	@ApiModelProperty(notes = "Name of the Box", name = "box", required = true)
@@ -24,8 +23,5 @@ public class Box
 	@NotNull
 	private int boxCapacity;
 
-	@ApiModelProperty(notes = "Available Box List", name = "box")
 	private List<String> availableBoxList;
-
-
 }

@@ -2,16 +2,13 @@ version: '3'
 
 services:
   warehouseservice:
-    image: warehouseservice.jar
+    image: praveenkumarmiddi/warehouse-service-backend:v1
     container_name: BackEndWarehouseService
     ports:
-      - 9090:8080
+      - 8080:8080
 
   warehouseFrontEnd:
     image: praveenkumarmiddi/warehouse-management-frontend:v1
     container_name: FrontEndwarehouse-management
     ports:
       - 80:80
-
-
-
